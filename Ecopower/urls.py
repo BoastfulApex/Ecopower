@@ -21,6 +21,7 @@ from .settings import STATIC_URL, STATIC_ROOT, MEDIA_URL, MEDIA_ROOT
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/', include('motors.urls')),
 ]
 
 
