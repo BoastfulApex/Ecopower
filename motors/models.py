@@ -17,6 +17,9 @@ class Brand(models.Model):
     description_ru = models.TextField(max_length=5000)
 
     image = models.FileField(null=True)
+
+    def __str__(self):
+        return self.name_uz
     
 
 class Car(models.Model):
@@ -26,7 +29,7 @@ class Car(models.Model):
         (USED, USED)
     )
     
-    YEAR_CHOICES = [(year, year) for year in range(2000, datetime.date.today().year+1)]
+    YEAR_CHOICES = [(f"{year}", f"{year}") for year in range(2000, datetime.date.today().year+1)]
 
     name_uz = models.CharField(max_length=2000)
     name_en = models.CharField(max_length=2000)
@@ -50,6 +53,10 @@ class Car(models.Model):
 
     top = models.BooleanField()
     
+    def __str__(self):
+        return self.name_uz
+    
+    
 
 class Video(models.Model):
     description_uz = models.TextField(max_length=5000)
@@ -72,6 +79,9 @@ class About(models.Model):
 
     image = models.FileField(null=True)
     
+    def __str__(self):
+        return self.name_uz
+
     
 class Image(models.Model):
     description_uz = models.CharField(max_length=5000)
@@ -89,3 +99,6 @@ class FAQ(models.Model):
     answer_uz = models.TextField(max_length=5000)
     answer_en = models.TextField(max_length=5000)
     answer_ru = models.TextField(max_length=5000)
+
+    def __str__(self):
+        return self.question_uz

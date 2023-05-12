@@ -10,3 +10,5 @@ files/
 static/
 .env
 .idea/
+
+env/
