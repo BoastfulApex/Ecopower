@@ -59,9 +59,9 @@ class Car(models.Model):
     
 
 class Video(models.Model):
-    description_uz = models.TextField(max_length=5000)
-    description_en = models.TextField(max_length=5000)
-    description_ru = models.TextField(max_length=5000)
+    description_uz = models.TextField(max_length=5000, null=True, blank=True)
+    description_en = models.TextField(max_length=5000, null=True, blank=True)
+    description_ru = models.TextField(max_length=5000, null=True, blank=True)
     
     video = models.FileField(null=True)
     
@@ -84,9 +84,9 @@ class About(models.Model):
 
     
 class Image(models.Model):
-    description_uz = models.CharField(max_length=5000)
-    description_en = models.CharField(max_length=5000)
-    description_ru = models.CharField(max_length=5000)
+    description_uz = models.CharField(max_length=5000, null=True, blank=True)
+    description_en = models.CharField(max_length=5000, null=True, blank=True)
+    description_ru = models.CharField(max_length=5000, null=True, blank=True)
     
     image = models.FileField(null=True)
 
