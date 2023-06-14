@@ -56,7 +56,6 @@ class Car(models.Model):
     def __str__(self):
         return self.name_uz
     
-    
 
 class Video(models.Model):
     description_uz = models.TextField(max_length=5000, null=True, blank=True)
@@ -102,3 +101,36 @@ class FAQ(models.Model):
 
     def __str__(self):
         return self.question_uz
+
+
+class News(models.Model):
+    name_uz = models.CharField(max_length=2000)
+    name_en = models.CharField(max_length=2000)
+    name_ru = models.CharField(max_length=2000)
+
+    description_uz = models.CharField(max_length=50000, null=True, blank=True)
+    description_en = models.CharField(max_length=50000, null=True, blank=True)
+    description_ru = models.CharField(max_length=50000, null=True, blank=True)
+
+    image = models.FileField(null=True)
+
+    def __str__(self):
+        return self.name_uz
+
+
+class Blog(models.Model):
+    name_uz = models.CharField(max_length=2000)
+    name_en = models.CharField(max_length=2000)
+    name_ru = models.CharField(max_length=2000)
+
+    description_uz = models.CharField(max_length=50000, null=True, blank=True)
+    description_en = models.CharField(max_length=50000, null=True, blank=True)
+    description_ru = models.CharField(max_length=50000, null=True, blank=True)
+
+    image = models.FileField(null=True)
+
+    def __str__(self):
+        return self.name_uz
+
+
+
