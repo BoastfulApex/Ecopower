@@ -49,6 +49,7 @@ class Car(models.Model):
     used = models.CharField(max_length=100, choices=USED_CHOICES)
     
     produced = models.CharField(max_length=200, choices=YEAR_CHOICES)
+    price = models.IntegerField(null=True, blank=True)
     run = models.FloatField(default=0)
 
     top = models.BooleanField()
