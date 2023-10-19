@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Brand, Car, Video, About, Image, FAQ, News, Blog
+from .models import Brand, Car, Video, About, Image, FAQ, News, Blog, CarDetail
 
 
 class BrandSerializer(serializers.ModelSerializer):
@@ -47,4 +47,10 @@ class NewsSerializer(serializers.ModelSerializer):
 class BlogSerializer(serializers.ModelSerializer):
     class Meta:
         model = Blog
+        fields = '__all__'
+
+
+class CarDetailSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = CarDetail
         fields = '__all__'

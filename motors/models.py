@@ -167,4 +167,17 @@ class Blog(models.Model):
         return self.name_uz
 
 
+class CarDetail(models.Model):
+    name_uz = models.CharField(max_length=2000)
+    name_en = models.CharField(max_length=2000)
+    name_ru = models.CharField(max_length=2000)
+    description_uz = models.TextField(max_length=5000)
+    description_en = models.TextField(max_length=5000)
+    description_ru = models.TextField(max_length=5000)
 
+    image = models.FileField(null=True)
+
+    link = models.CharField(max_length=10000, null=True, blank=True)
+
+    def __str__(self):
+        return self.name_uz

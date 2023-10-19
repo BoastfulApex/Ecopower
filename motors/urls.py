@@ -1,6 +1,6 @@
 from django.urls import path
 from .views import BrandListView, CarListView, VideoListView, AboutListView, ImageView, FAQListView, \
-    TopCarsAPIView
+    TopCarsAPIView, CarDetailAPIView
 from rest_framework import permissions
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
@@ -22,6 +22,7 @@ urlpatterns = [
 
     path('brands/', BrandListView.as_view(), name='brand-list'),
     path('cars/', CarListView.as_view(), name='car-list'),
+    path('car_detail/', CarDetailAPIView.as_view(), name='car_detail-list'),
     path('top-cars/', TopCarsAPIView.as_view(), name='top_cars'),
     path('videos/', VideoListView.as_view(), name='video-list'),
     path('about/', AboutListView.as_view(), name='about-list'),
