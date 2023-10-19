@@ -22,7 +22,7 @@ urlpatterns = [
 
     path('brands/', BrandListView.as_view(), name='brand-list'),
     path('cars/', CarListView.as_view(), name='car-list'),
-    path('car_detail/', SliderAPIView.as_view(), name='car_detail-list'),
+    path('sliders/', SliderAPIView.as_view(), name='slider-list'),
     path('top-cars/', TopCarsAPIView.as_view(), name='top_cars'),
     path('videos/', VideoListView.as_view(), name='video-list'),
     path('about/', AboutListView.as_view(), name='about-list'),
