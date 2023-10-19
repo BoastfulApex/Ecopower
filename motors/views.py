@@ -47,6 +47,6 @@ class BlogAPIView(ListAPIView):
     serializer_class = BlogSerializer
 
 
-class CarDetailAPIView(ListAPIView):
-    queryset = CarDetail.objects.filter()
-    serializer_class = CarDetailSerializer
+class SliderAPIView(ListAPIView):
+    queryset = Slider.objects.filter()
+    serializer_class = SliderSerializer
